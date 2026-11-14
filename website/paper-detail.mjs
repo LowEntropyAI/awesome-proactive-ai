@@ -1,4 +1,4 @@
-const base = '/awesome-proactive-agent/';
+const base = '/awesome-proactive-ai/';
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const bi = (en,zh) => `<span data-en="${esc(en)}" data-zh="${esc(zh)}">${esc(en)}</span>`;
 export const definitionPath = 'what-is-proactive-ai/';

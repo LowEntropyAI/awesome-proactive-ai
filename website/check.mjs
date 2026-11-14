@@ -1,5 +1,5 @@
 import { readdirSync, readFileSync, existsSync } from 'node:fs';
-import { resolve } from 'node:path';
+import { relative, resolve } from 'node:path';
 import assert from 'node:assert/strict';
 import { base, esc } from './views.mjs';
 const root = resolve('dist');
@@ -8,6 +8,8 @@ function walk(dir) { for (const entry of readdirSync(dir, { withFileTypes: true 
 function check(path) {
   const html = readFileSync(path, 'utf8'); pages++;
   assert.match(html, /<title>.+<\/title>/); assert.match(html, /<main id="main">/);
+  const route = relative(root, path).replaceAll('\\', '/').replace(/(^|\/)index\.html$/, '$1');
+  assert.ok(html.includes(`rel="canonical" href="https://lowentropyai.github.io${base}${route}"`), `${path}: incorrect canonical URL`);
   assert.doesNotMatch(html, /<h[1-6][^>]*>(?:Why It Matters|Proactivity Signal|Evaluation Setup|Key Limitations|Use For)<\//, `${path}: repository note sections should not be website articles`);
   for (const [, href] of html.matchAll(/(?:href|src)="([^"#]+)(?:#[^"]*)?"/g)) {
     if (!href.startsWith(base)) continue;

@@ -1,4 +1,4 @@
-<h1 align="center">Awesome Proactive Agents</h1>
+<h1 align="center">Awesome Proactive AI</h1>
 
 <p align="center">
   Anticipate needs. Take initiative. Help appropriately.
@@ -12,8 +12,8 @@
 </p>
 
 <p align="center">
-  <a href="https://lowentropyai.github.io/awesome-proactive-agent/"><strong>Explore the Atlas</strong></a> ·
-  <a href="https://lowentropyai.github.io/awesome-proactive-agent/#discover">Recent Papers</a> ·
+  <a href="https://lowentropyai.github.io/awesome-proactive-ai/"><strong>Explore the Atlas</strong></a> ·
+  <a href="https://lowentropyai.github.io/awesome-proactive-ai/#discover">Recent Papers</a> ·
   <a href="PERSONAL_AGENTS.md">Personal Agents</a> ·
   <a href="STREAMING.md">Streaming Proactivity</a> ·
   <a href="PROJECTS.md">Projects &amp; Products</a>
@@ -21,11 +21,11 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="https://lowentropyai.github.io/awesome-proactive-agent/"><img src="https://img.shields.io/badge/Website-Proactive%20Atlas-176357" alt="Website: Proactive Atlas"></a>
-  <a href="https://github.com/LowEntropyAI/awesome-proactive-agent/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"></a>
+  <a href="https://lowentropyai.github.io/awesome-proactive-ai/"><img src="https://img.shields.io/badge/Website-Proactive%20Atlas-176357" alt="Website: Proactive Atlas"></a>
+  <a href="https://github.com/LowEntropyAI/awesome-proactive-ai/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"></a>
 </p>
 
-> A curated collection of **proactive AI research and applications**, bringing together papers, agents, models, systems, projects, products, benchmarks, and supporting infrastructure.
+> A curated guide to **proactive AI**: how models and systems anticipate needs, take initiative, and decide when to help, ask, or wait. Explore research papers, models, interaction designs, agents, products, benchmarks, datasets, and supporting tools.
 
 > If this list is useful, a ⭐ helps others find it.
 
@@ -35,7 +35,7 @@
 - [Proactive Personal Agents](PERSONAL_AGENTS.md): assistants, research methods, interaction models, and evaluations across desktop, mobile, and physical-world interfaces.
 - [Supporting Infrastructure](INFRASTRUCTURE.md): observation, memory, activation, and serving roles.
 
-- [Proactive Atlas Website](https://lowentropyai.github.io/awesome-proactive-agent/): searchable papers, projects, models, datasets, selected overview figures, and benchmarks under LowEntropyAI.
+- [Proactive Atlas Website](https://lowentropyai.github.io/awesome-proactive-ai/): searchable papers, projects, models, datasets, selected overview figures, and benchmarks under LowEntropyAI.
 - [Website Development & Deployment](WEBSITE.md): shared content sources, local preview, validation, and automatic GitHub Pages publishing.
 - [Projects & Products](PROJECTS.md): agent runtimes, ambient assistants, products, and supporting components, with concrete activation mechanisms.
 - [Streaming Proactivity](STREAMING.md): visual triggers, evidence-conditioned response timing, full-duplex interaction, model resources, and evaluation routes.
@@ -68,7 +68,7 @@
 
 ## Scope
 
-This collection covers **work related to proactive AI**: anticipating needs, inferring latent intent, taking initiative, and deciding when to ask, suggest, remind, act, or remain silent. It includes foundations and human factors, agent methods, interaction models, implemented systems and products, benchmarks and datasets, and supporting infrastructure.
+**Proactive AI is a capability, not a system architecture.** It includes anticipating needs and deciding whether, when, and how to ask, suggest, remind, act, or remain silent. An end-to-end agent is one way to deliver that capability; a streaming model that learns when to speak, a collaborative interface that decides when to offer a hint, and a benchmark that measures unnecessary interruptions also belong here.
 
 Application settings include personal assistance, dialogue, information seeking, coding and digital workflows, streaming multimodal interaction, wearables, robotics, collaboration, and domain-specific assistance. These are starting points for browsing; the collection can grow as new proactive capabilities and applications emerge.
 

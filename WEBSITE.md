@@ -1,6 +1,6 @@
 # Proactive Atlas · LowEntropyAI
 
-The repository's research website is published at **https://lowentropyai.github.io/awesome-proactive-agent/**.
+[Awesome Proactive AI](https://github.com/LowEntropyAI/awesome-proactive-ai) publishes its research website, **Proactive Atlas**, at https://lowentropyai.github.io/awesome-proactive-ai/. The site covers proactive models and interactions as well as agents, benchmarks, and supporting systems.
 
 ## Develop and verify
 
@@ -11,7 +11,7 @@ npm ci
 npm run dev
 ```
 
-Open `http://localhost:4173/awesome-proactive-agent/`. The preview uses the same project base path as the deployed site. Rebuild and reload after editing.
+Open `http://localhost:4173/awesome-proactive-ai/`. The preview uses the same project base path as the deployed site. Rebuild and reload after editing.
 
 ```sh
 npm run check

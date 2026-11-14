@@ -1,11 +1,11 @@
-# Contributing to Proactive Atlas
+# Contributing to Awesome Proactive AI
 
 Help keep the collection useful, traceable, and easy to maintain. Bibliographic content and the LowEntropyAI website share the same Markdown sources.
 
 ## Add or correct a paper
 
 1. Check `README.md` for the title and canonical source URL to avoid duplicates.
-2. Explain the connection to [proactive AI](README.md#scope): a proactive decision or capability, a foundation or human-factor question, an evaluation target, or a supporting mechanism. Describe the actual contribution and available evidence; identify proactive subsets when the work covers broader tasks.
+2. Explain the connection to [proactive AI](README.md#scope): a proactive decision or capability, a foundation or human-factor question, an evaluation target, or a supporting mechanism. A complete agent is not required. Describe the actual contribution and available evidence; identify proactive subsets when the work covers broader tasks.
 3. Add a row under the best-fitting `## Papers` section using the existing five-column schema: date, title, venue/source, tags, resources. Use existing tags from the vocabulary.
 4. Preserve publication uncertainty: a submission, preprint, repository claim, and verified conference acceptance are distinct statuses.
 5. Add a note under `papers/arxiv/YYYY-MM/` or `papers/conference/VENUE/`. Use the exact headings `Why It Matters`, `Proactivity Signal`, `Evaluation Setup`, `Key Limitations`, and `Use For`. Ground results in primary sources and state evaluation limits.

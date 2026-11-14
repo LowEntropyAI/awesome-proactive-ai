@@ -85,7 +85,7 @@ export function loadCatalog() {
     paper.featured = Boolean(pick); paper.reason = pick?.reason ?? '';
     if (!paper.summary) paper.summary = shortSummaries[paper.id] || paper.reason;
     paper.featureOrder = pick ? featured.indexOf(pick) : 999;
-    if (paper.note) paper.evidenceUrl = 'https://github.com/LowEntropyAI/awesome-proactive-agent/blob/main/' + paper.note;
+    if (paper.note) paper.evidenceUrl = 'https://github.com/LowEntropyAI/awesome-proactive-ai/blob/main/' + paper.note;
     if (recent.papers[paper.id]) {
       const line = initiativeNotes[paper.id];
       if (!line?.en?.trim() || !line.zh?.trim() || !['act','ask','eval','support'].includes(line.kind)) throw new Error('Missing initiative note: '+paper.id);
@@ -98,7 +98,7 @@ export function loadCatalog() {
       paper.tags = paper.tags.filter(t => t !== 'Streaming');
       if (paper.streaming) paper.tags.push('Streaming');
       if (!/^\d{4}-\d{2}-\d{2}$/.test(paper.publishedAt) || new Date(paper.publishedAt).toISOString().slice(0, 10) !== paper.publishedAt) throw new Error(`Invalid first-posted date: ${paper.id}`);
-      if (figure) paper.thumbnail = { src: '/awesome-proactive-agent/assets/overviews/' + figure.file, original: figure.original, source: figure.source ?? paper.primary, alt: figure.alt, caption: 'Original figure · paper authors', description: figure.caption ?? '' };
+      if (figure) paper.thumbnail = { src: '/awesome-proactive-ai/assets/overviews/' + figure.file, original: figure.original, source: figure.source ?? paper.primary, alt: figure.alt, caption: 'Original figure · paper authors', description: figure.caption ?? '' };
       // A targeted new audit must not silently refresh older artifact checks.
       if (release) paper.release = { ...release, checkedAt: release.checkedAt ?? recent.checkedAt };
     }
@@ -151,7 +151,7 @@ export function loadCatalog() {
     p.thumbnail ??= editorialThumbnail('project-'+p.id,p.title,p.primary,p.groupLabel);
     if(projectMarks[p.id]) {
       const [original,caption]=projectMarks[p.id];
-      p.thumbnail={src:'/awesome-proactive-agent/assets/brands/'+p.id+'.png',original,source:original,caption,alt:caption+' — '+p.title,brand:true};
+      p.thumbnail={src:'/awesome-proactive-ai/assets/brands/'+p.id+'.png',original,source:original,caption,alt:caption+' — '+p.title,brand:true};
     }
   }
   for (const [id, role] of Object.entries(paperRoles)) if (!ids.has(id) || !['core', 'adjacent', 'supporting'].includes(role)) throw new Error(`Invalid paper role: ${id}`);

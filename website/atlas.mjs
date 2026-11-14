@@ -2,8 +2,8 @@
 import { paperPath, roleBadge, definitionPath } from './paper-detail.mjs';
 import { recentPapers, gallerySection } from './gallery.mjs';
 import { conceptGrid } from './discovery.mjs';
-const base = '/awesome-proactive-agent/';
-const repo = 'https://github.com/LowEntropyAI/awesome-proactive-agent';
+const base = '/awesome-proactive-ai/';
+const repo = 'https://github.com/LowEntropyAI/awesome-proactive-ai';
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const bi = (en, zh) => `<span data-en="${esc(en)}" data-zh="${esc(zh)}">${esc(en)}</span>`;
 const external = 'target="_blank" rel="noopener noreferrer"';
@@ -15,8 +15,8 @@ export const projectMarkFile = id => clearMarks.has(id) ? id + '.clear.png' : na
 const inlineMark = id => id === 'proactivity-sdk' ? '' : projectMarkFile(id);
 
 export const definition = {
-  en: 'A proactive agent decides whether, when and how to help—without waiting to be asked. Staying silent is one of its decisions.',
-  zh: '主动式智能体无需等待请求，自行判断是否帮助、何时帮助、如何帮助——保持沉默也是它的一种决定。'
+  en: 'Proactive AI anticipates needs and decides whether, when, and how to help without waiting for a direct request. Sometimes the right choice is to stay quiet.',
+  zh: '主动式 AI 不必等到用户明确开口，就能预判需求，并判断是否、何时以及怎样提供帮助。有时，不打扰才是合适的选择。'
 };
 const questions = [
   ['Did anyone ask for this?', '有人提出这个请求了吗？', 'The action is not a reply to a request for this help.', '这次行动不是对相应请求的回复。'],

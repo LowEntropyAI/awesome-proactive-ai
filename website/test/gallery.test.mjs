@@ -36,7 +36,7 @@ test('original previews, evidence links and release checks are traceable', () =>
   for (const p of recent) {
     assert.ok(p.evidenceUrl?.endsWith(p.note));
     if (p.thumbnail && !p.thumbnail.editorial) {
-      assert.ok(existsSync(resolve(root, 'website', p.thumbnail.src.replace('/awesome-proactive-agent/', ''))));
+      assert.ok(existsSync(resolve(root, 'website', p.thumbnail.src.replace('/awesome-proactive-ai/', ''))));
       assert.match(p.thumbnail.original, /^https:\/\//);
       assert.ok(p.thumbnail.alt && p.thumbnail.caption && p.thumbnail.source);
     }

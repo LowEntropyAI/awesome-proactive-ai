@@ -4,7 +4,7 @@
       "displayTitle": "Proactive Agent",
       "description": "Event streams → task anticipation → proactive assistance.",
       "thumbnail": {
-        "src": "/awesome-proactive-agent/assets/overviews/proactive-agent-shifting-llm.png",
+        "src": "/awesome-proactive-ai/assets/overviews/proactive-agent-shifting-llm.png",
         "alt": "Proactive Agent data collection, agent and evaluation pipeline",
         "source": "https://github.com/thunlp/ProactiveAgent#overview",
         "caption": "Official project overview · THUNLP",
@@ -21,7 +21,7 @@
       "displayTitle": "JoyAI-VL-Interaction",
       "description": "Continuous visual events → silent / respond / delegate decisions.",
       "thumbnail": {
-        "src": "/awesome-proactive-agent/assets/overviews/joyai-vl-interaction.png",
+        "src": "/awesome-proactive-ai/assets/overviews/joyai-vl-interaction.png",
         "alt": "JoyAI-VL-Interaction overview of real-time visual interaction and delegation",
         "source": "https://github.com/jd-opensource/JoyAI-VL-Interaction",
         "caption": "Official model and system overview · JD",
@@ -33,7 +33,7 @@
       "displayTitle": "Gander",
       "description": "Live audio/video → listen, speak, or delegate. A streaming interaction model coordinates proactive feedback with an asynchronous task agent.",
       "thumbnail": {
-        "src": "/awesome-proactive-agent/assets/overviews/gander-omni-interaction-agent.png",
+        "src": "/awesome-proactive-ai/assets/overviews/gander-omni-interaction-agent.png",
         "alt": "Gander capabilities connecting full-duplex multimodal interaction and asynchronous agent work",
         "source": "https://github.com/Omni-Interaction-Gander/Omni-Interaction-Agent",
         "caption": "Official capabilities overview · Gander authors",
@@ -46,7 +46,7 @@
       "description": "Hidden user intents and task completion in long-horizon personal workflows.",
       "selectionGroup": "benchmark",
       "thumbnail": {
-        "src": "/awesome-proactive-agent/assets/overviews/pi-bench.png",
+        "src": "/awesome-proactive-ai/assets/overviews/pi-bench.png",
         "alt": "Pi-Bench overview of user roles, cross-session workflows, hidden intents and evaluation",
         "source": "https://github.com/Simplified-Reasoning/Pi-Bench",
         "original": "https://simplified-reasoning.github.io/Pi-Bench/assets/figures/overview.png",
@@ -63,7 +63,7 @@
       "description": "Latent-need detection, long-term memory, and silence / fast / full assistance.",
       "selectionGroup": "agent",
       "thumbnail": {
-        "src": "/awesome-proactive-agent/assets/overviews/pask.png",
+        "src": "/awesome-proactive-ai/assets/overviews/pask.png",
         "alt": "PASK overview of demand detection and continuous proactive assistance in learning, meetings and daily life",
         "source": "https://xzf-thu.github.io/Pask/",
         "caption": "Official system overview · PASK authors",

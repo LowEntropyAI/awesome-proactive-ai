@@ -32,7 +32,7 @@ test('guide links resolve to site routes while evidence cards stay on GitHub', (
   assert.ok(html.includes(`${base}applications/#personal-assistance`));
   assert.ok(html.includes(`${base}picks/#reading-path`));
   assert.ok(html.includes(`${base}library/`));
-  assert.ok(html.includes('https://github.com/LowEntropyAI/awesome-proactive-agent/blob/main/papers/arxiv/example.md'));
+  assert.ok(html.includes('https://github.com/LowEntropyAI/awesome-proactive-ai/blob/main/papers/arxiv/example.md'));
 });
 
 test('guide rendering strips executable content while retaining table headings', () => {

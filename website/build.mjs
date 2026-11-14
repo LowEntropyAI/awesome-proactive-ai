@@ -21,15 +21,15 @@ const supplement = file => `<section class="prose guide-content">${markdown(read
 const mustRead = read('README.md').split('## Must Read\n')[1]?.split('\n## ')[0];
 if (!mustRead) throw new Error('Missing Must Read source');
 const pages = [
-  ['', 'Proactive Atlas: What Proactive AI Is, and the Latest Research', home(catalog), definition.en + ' Read the latest papers and our picks.'],
+  ['', 'Proactive Atlas: Proactive AI Research, Models & Benchmarks', home(catalog), 'Explore how AI models, agents, and interfaces anticipate needs and decide when to help, ask, or wait. Browse the latest papers, projects, and benchmarks.'],
   [definitionPath, 'What Is Proactive AI? A Definition and Three-Question Test', definitionPage(catalog), definition.en + ' Use the three-question test and see how it differs from chatbots, automation and autonomous agents.'],
   ['picks/', 'Proactive AI Picks: Papers, Products and Projects to Start With', picksPage(catalog, markdown('## Reading path\n' + mustRead)), 'New to proactive AI? Start with these papers, products and open projects, each with a short reason, followed by a layered reading path.'],
-  ['recent/', 'Latest Proactive AI Agent Papers', recentPage(catalog), 'Catch up on new proactive AI research in order of first publication. Filter papers by research question, context or mechanism, then open a brief or the original paper.'],
+  ['recent/', 'Latest Proactive AI Papers', recentPage(catalog), 'Catch up on proactive AI research, from model behavior and interaction design to agent systems and evaluations. Filter by research question, context, or mechanism.'],
   ['library/', 'Research library', library(catalog)],
   ['streaming/', 'Streaming proactive models', library(catalog, true) + supplement('STREAMING.md')],
   ['benchmarks/', 'Benchmark comparison', benchmarkPage(catalog) + supplement('BENCHMARKS.md')],
   ['map/', 'Research map', guidePage(catalog, markdown(read('RESEARCH_MAP.md')), 'map')],
-  ['projects/', 'Proactive AI Agent Projects, Tools & Code', projectPage(catalog) + `<details class="project-source-notes"><summary>Source guide / 完整来源说明</summary>${supplement('PROJECTS.md')}</details>`, 'Find proactive assistants, agent frameworks and research implementations. Browse by project type and go directly to a code repository or the official product page.'],
+  ['projects/', 'Proactive AI Projects, Tools & Code', projectPage(catalog) + `<details class="project-source-notes"><summary>Source guide / 完整来源说明</summary>${supplement('PROJECTS.md')}</details>`, 'Find proactive assistants, research implementations, runtimes, and supporting components. Browse by project type and open the source repository or official product page.'],
   ['applications/', 'Agents & applications', guidePage(catalog, markdown(read('APPLICATIONS.md')), 'applications')],
   ['personal/', 'Proactive personal agents', guidePage(catalog, markdown(read('PERSONAL_AGENTS.md')), 'personal')],
   ['infrastructure/', 'Supporting infrastructure', guidePage(catalog, markdown(read('INFRASTRUCTURE.md')), 'infrastructure')]
@@ -51,7 +51,7 @@ for (const [from, to] of [['understand/', definitionPath], ['selected/', 'picks/
 }
 write('catalog.json', JSON.stringify({ ...catalog, atlas: undefined, selectionGuide: undefined, papers: catalog.papers.map(({ noteText, summary, reason, note, ...p }) => ({ ...p, hasNotes: Boolean(note) })) }));
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${pages.map(p => p[0]).map(path => `<url><loc>https://lowentropyai.github.io${base}${esc(path)}</loc></url>`).join('')}</urlset>`);
-write('robots.txt', 'User-agent: *\nAllow: /\nSitemap: https://lowentropyai.github.io/awesome-proactive-agent/sitemap.xml\n');
+write('robots.txt', 'User-agent: *\nAllow: /\nSitemap: https://lowentropyai.github.io/awesome-proactive-ai/sitemap.xml\n');
 write('.nojekyll', '');
 for (const name of ['discovery.css', 'catalog-client.js', 'paper-detail-client.js', 'style.css', 'experience.css', 'experience.js', 'gallery.css', 'gallery.mjs', 'gallery-client.js', 'app.js', 'theme.js', 'search.mjs', 'resources.mjs', 'favicon.svg', 'social.svg']) { mkdirSync(resolve(out, 'assets'), { recursive: true }); copyFileSync(resolve(root, 'website', name), resolve(out, 'assets', name.endsWith('.mjs') ? name.replace('.mjs', '.js') : name)); }
 copyFileSync(resolve(root, 'website/assets/lowentropyai.png'), resolve(out, 'assets/lowentropyai.png'));

@@ -51,7 +51,7 @@ test('selected figures and project navigation retain original source URLs', () =
   const selected = catalog.papers.filter(p => p.selected);
   assert.equal(selected.length, 12);
   for (const p of selected.filter(p => p.thumbnail)) {
-    const imagePath = resolve(root, 'website', p.thumbnail.src.replace('/awesome-proactive-agent/', ''));
+    const imagePath = resolve(root, 'website', p.thumbnail.src.replace('/awesome-proactive-ai/', ''));
     assert.ok(existsSync(imagePath));
     assert.match(p.thumbnail.source, /^https:\/\//);
     assert.match(p.thumbnail.original, /^https:\/\//);

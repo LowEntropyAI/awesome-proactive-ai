@@ -1,7 +1,7 @@
 // Shared by the static generator and browser. No network, clock or locale-dependent order.
 import { paperPath, roleBadge } from './paper-detail.mjs';
 import { facetGroups, matchesFacets, normalizeFilters } from './facets.mjs';
-const base = '/awesome-proactive-agent/';
+const base = '/awesome-proactive-ai/';
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const bi = (en, zh) => `<span data-en="${esc(en)}" data-zh="${esc(zh)}">${esc(en)}</span>`;
 // On the same date, picks and core work lead; the date stays the primary order.

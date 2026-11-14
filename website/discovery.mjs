@@ -1,7 +1,7 @@
 // Reading paths, not a mutually exclusive taxonomy of the field.
 import { facetGroups } from './facets.mjs';
 import { paperPath, roleBadge } from './paper-detail.mjs';
-const base = '/awesome-proactive-agent/';
+const base = '/awesome-proactive-ai/';
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const bi = (en, zh) => `<span data-en="${en}" data-zh="${zh}">${en}</span>`;
 function initiativeScene() {

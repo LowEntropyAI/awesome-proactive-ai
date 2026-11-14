@@ -1,5 +1,5 @@
 // Editorial artwork is orientation, never a reconstruction of a paper's method.
-const base = '/awesome-proactive-agent/assets/editorial/';
+const base = '/awesome-proactive-ai/assets/editorial/';
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function editorialThumbnail(id, title, source, category = 'Research') {
   return {src:base+id+'.svg',original:base+id+'.svg',source,alt:`Editorial cover for ${title}`,caption:'Editorial cover · not an author figure',description:'Collection artwork for navigation; not a diagram of the method or a research result.',editorial:true,coverTitle:title,coverCategory:category};

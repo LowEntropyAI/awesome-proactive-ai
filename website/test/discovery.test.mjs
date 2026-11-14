@@ -167,7 +167,7 @@ test('requested covers retain source attribution and descriptive captions',()=>{
   const p=catalog.papers.find(p=>p.id===id);
   assert.match(p.thumbnail.description,/Editorial caption:/);
   assert.match(paperDetail(p),/<figcaption>/);
-  const svg=read('website'+p.thumbnail.src.replace('/awesome-proactive-agent',''));
+  const svg=read('website'+p.thumbnail.src.replace('/awesome-proactive-ai',''));
   assert.doesNotMatch(svg,/<script|<foreignObject|(?:href|src)=["']https?:/);
  }
 });
