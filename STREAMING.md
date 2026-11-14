@@ -4,11 +4,22 @@
 
 Streaming proactivity is a dedicated cross-cutting module: it connects **models, inference frameworks, memory, training data, and evaluation**. Paper entries remain in the bibliography. This guide asks who chooses the next output and what evidence can cause that choice.
 
-**Literature checked: 2026-11-06** (submission window October 30 to November 5 UTC). New streaming methods are **SurgStream** and **TurnWise**; **Omni-Life** and the voice **InteractionBench** add evaluation routes; **StreamClarify** and **ReferClaw** clarify questions users ask about a stream. See the [November 6 report](docs/updates/2026-11-06.md).
+**Literature checked: 2026-11-15** (submission window November 5, 19:00 UTC to November 12, 19:00 UTC). **TimeTraveler** times answers to standing questions and **Duo** releases an open full-duplex audiovisual model; **Joi-Bench-Task** and **MemInStream** add evaluation routes for voice result reporting and streaming memory. No new streaming model makes an unrequested help decision in this window. See the [November 15 report](docs/updates/2026-11-15.md).
 
-**Previous check: 2026-10-31** (submission window October 23–31 UTC; newest returned submissions dated October 29). New video-model methods are **StreamVibe**, **SyncPro**, and **Live-OPSD**; **AskStream** and **Omni-InteractScope** add evaluation routes. **ProactMem / ProactiveStream** processes structured events, not native audiovisual streams. See the [scan and release report](docs/updates/2026-10-31.md).
+**Previous check: 2026-11-06** (submission window October 30 to November 5 UTC). New streaming methods are **SurgStream** and **TurnWise**; **Omni-Life** and the voice **InteractionBench** add evaluation routes; **StreamClarify** and **ReferClaw** clarify questions users ask about a stream. See the [November 6 report](docs/updates/2026-11-06.md).
+
+**Earlier check: 2026-10-31** (submission window October 23–31 UTC; newest returned submissions dated October 29). New video-model methods are **StreamVibe**, **SyncPro**, and **Live-OPSD**; **AskStream** and **Omni-InteractScope** add evaluation routes. **ProactMem / ProactiveStream** processes structured events, not native audiovisual streams. See the [scan and release report](docs/updates/2026-10-31.md).
 
 **Release recheck: 2026-10-24.** MemoProAgent (formerly ProPerAgent) now has public inference/evaluation code and eval800 memory histories; Ego4D videos need separate access and post-trained weights were not verified. Gander has public runtime/training files and Thinker/Talker weights; its full dataset remains pending. P3IBench still exposes inference/evaluation code and benchmark files, not a verified assistant checkpoint. SurgStreamer remains announced; EgoVoice still schedules release for November; StreamingJev has no verified release; PAM remains a website/helper-tool repository. These are artifact checks, not successful inference or reproduced scores.
+
+## November 15: New Models and Evaluation
+
+| Work | Core decision / mechanism | Verified release snapshot | Scope boundary |
+|---|---|---|---|
+| **TimeTraveler** | A planner routes each question to past, present or future evidence over timestamped captions; a 2B yes/no gate waits and answers "tell me when" questions once the condition holds. | [Project](https://geppa.github.io/TimeTraveler) · [Notes](papers/arxiv/2026-11/timetraveler-streaming-time-dictionary.md). Repository is README-only. | Times an answer to a supplied question; training-free; NeurIPS 2026 per arXiv. |
+| **Duo** | Every 0.71 s chunk the intent module emits speak-with-text or wait; a realization model renders audio and video. | [Code](https://github.com/inclusionAI/Duo) · [Weights](https://huggingface.co/collections/inclusionAI/duo-v1) · [Notes](papers/arxiv/2026-11/duo-reciprocal-world-model.md). Inference only; no training code or data. | User-driven conversation; 30-case human check with no baselines and no timing metric. |
+| **Joi-Bench-Task** | Benchmark: when a full-duplex voice agent reports background tool results while the user changes requests or interrupts. | [Paper](https://arxiv.org/abs/2611.12118) · [Notes](papers/arxiv/2026-11/joi-bench-task-voice-coordination.md). No release found. | Requests always come from the user; simulated users and LLM scoring. |
+| **MemInStream** | Benchmark: evidence-controlled streaming memory questions that recent frames or language priors cannot answer. | [Code](https://github.com/HKUST-LongGroup/MemInStream) · [Data](https://huggingface.co/datasets/zizi32/MemInStream) · [Notes](papers/arxiv/2026-11/meminstream-streaming-memory.md) | Memory only; no initiative decision. |
 
 ## November 6: New Models and Evaluation
 
@@ -109,6 +120,8 @@ Select a benchmark by the decision it measures, not simply whether its inputs ar
 | Everyday omnimodal intervention and silence | **Omni-Life** | 555 intervention points and 110 silence-only videos; full correctness needs coverage, content, timing and no unwanted output. Mostly generated clips. | [Paper](https://arxiv.org/abs/2611.02835) · [Code](https://github.com/todayai-labs/omni-life) |
 | Deadline-windowed surgical alerts | **SurgStream-Bench** | Phase-transition alerts and reminders scored inside clinical windows across five temporal modes; one procedure type. | [Paper](https://arxiv.org/abs/2611.01982) |
 | Voice floor control | **InteractionBench (voice)** | Turn-taking, pauses, interruptions and staying quiet on synthesized audio across seven voice systems; mostly reactive. Distinct from the streaming-video InteractionBench. | [Paper](https://arxiv.org/abs/2611.02430) · [Code](https://github.com/avera-labs/InteractionBench) |
+| Voice result reporting under interruption | **Joi-Bench-Task** | Whether a full-duplex agent reports background results at the right time and without omissions while the user changes or interrupts requests. Requests are always supplied. | [Paper](https://arxiv.org/abs/2611.12118) |
+| Memory necessity in streams | **MemInStream** | Answers that need evidence from earlier in the stream, separated from recent-frame recognition and language priors. A component check, not an initiative test. | [Paper](https://arxiv.org/abs/2611.15640) · [Code](https://github.com/HKUST-LongGroup/MemInStream) |
 
 **Related but not native streaming:** [ProMemAgent](papers/arxiv/2026-10/promemagent-prospective-memory.md) evaluates prospective memory over discrete sensory contexts; [PITCH](papers/arxiv/2026-10/pitch-multiparty-intervention-timing.md) tests incremental text-chat timing with fixed candidate contributions. Do not count either as a new audiovisual streaming foundation model.
 

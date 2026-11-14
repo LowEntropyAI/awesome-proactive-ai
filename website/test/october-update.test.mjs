@@ -86,3 +86,17 @@ test('November 6 additions keep roles, streaming membership and release boundari
   const names = read('BENCHMARKS.md').split('\n').filter(l => l.startsWith('| **InteractionBench')).map(l => l.split(' | ')[0]);
   assert.deepEqual(names, ['| **InteractionBench**', '| **InteractionBench (voice)**']);
 });
+test('November 15 additions keep roles, streaming membership and release boundaries', () => {
+  const recent = recentPapers(catalog.papers);
+  const get = id => recent.find(p => p.id === id);
+  const roles = { 'coco-deep-personalization': 'core', 'autobuddy-task-discovery': 'core', 'homeloop-domestic-intervention': 'core', 'agentic-companions-outreach': 'adjacent', 'deepradio-authorized-hardware': 'adjacent', 'timetraveler-streaming-time-dictionary': 'adjacent', 'joi-bench-task-voice-coordination': 'adjacent', 'duo-reciprocal-world-model': 'supporting', 'meminstream-streaming-memory': 'supporting', 'mindmem-mental-state-memory': 'supporting' };
+  for (const [id, role] of Object.entries(roles)) assert.equal(get(id)?.role, role, id);
+  const stream = recentPapers(catalog.papers, { lens: 'streaming' }).map(p => p.id);
+  for (const id of ['timetraveler-streaming-time-dictionary', 'joi-bench-task-voice-coordination', 'duo-reciprocal-world-model', 'meminstream-streaming-memory']) assert.ok(stream.includes(id), id);
+  for (const id of ['coco-deep-personalization', 'autobuddy-task-discovery', 'homeloop-domestic-intervention', 'mindmem-mental-state-memory']) assert.ok(!stream.includes(id), id);
+  assert.equal(get('coco-deep-personalization').release.code, 'Partial');
+  assert.equal(get('duo-reciprocal-world-model').release.model, 'Available');
+  assert.equal(get('timetraveler-streaming-time-dictionary').release.code, 'Announced');
+  assert.equal(get('agentic-companions-outreach').thumbnail.editorial, true); // The paper has no figures.
+  assert.match(read('papers/arxiv/2026-11/autobuddy-task-discovery.md'), /interruption timing and whether the person wanted the work done are not tested/);
+});

@@ -74,3 +74,12 @@ Original figure URLs, author attribution, source pages and alternative text are 
 | `clarifying-questions-reliance.png` | [Is That Clear? authors, Figure 1](https://arxiv.org/html/2611.01087v1/study-design.png) |
 | `interactionbench-voice.png` | [InteractionBench (voice) authors, Figure 1](https://arxiv.org/pdf/2611.02430v1#page=2) |
 | `dialogue-backdoors.png` | [Proactive Dialogue Backdoors authors, Fig. 1](https://arxiv.org/html/2611.06969v1/figure1.png) |
+| `coco.png` | [Coco authors, Figure 1](https://arxiv.org/html/2611.13457v1/coco-paper-overview.png) |
+| `autobuddy.svg` | [AutoBuddy authors, Figure 3](https://arxiv.org/html/2611.12393v1/agent.svg) |
+| `homeloop.jpg` | [HomeLoop authors, Figure 1](https://arxiv.org/html/2611.08914v1/figures/fig01_showcase.jpg) |
+| `deepradio.png` | [DeepRadio authors, Figure 1](https://arxiv.org/html/2611.09418v1/teaser.png) |
+| `timetraveler.png` | [TimeTraveler authors, Figure 1](https://arxiv.org/html/2611.10337v1/concept.png) |
+| `joi-bench-task.png` | [Joi-Bench-Task authors, Figure 1](https://arxiv.org/html/2611.12118v1/benchmark_framework_2.png) |
+| `duo.png` | [Duo authors, Figure 1](https://arxiv.org/html/2611.15131v1/duo-teaser-editorial.png) |
+| `meminstream.png` | [MemInStream authors, Figure 1](https://arxiv.org/html/2611.15640v1/MemInStream_teaser_v3.png) |
+| `mindmem.png` | [MindMem authors, Figure 1](https://arxiv.org/html/2611.16223v1/doc/figures/Emotional_Support_Memory_Retrieval.png) |
