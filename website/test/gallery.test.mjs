@@ -62,7 +62,7 @@ test('gallery has static cards, genuine dates, filters, progressive loading and 
   assert.equal((gallerySection(catalog, true).match(/class="gallery-card"/g) || []).length, 6);
   const page = layout('Recent papers', recentPage(catalog), 'recent/');
   assert.equal((page.match(/class="gallery-card"/g) || []).length, 9);
-  for (const marker of ['gallery-client.js', 'gallery.css', 'gallery-search', 'gallery-more', 'datetime="2026-11-09"', 'data-lens="streaming"']) assert.ok(page.includes(marker), marker);
+  for (const marker of ['gallery-client.js', 'gallery.css', 'gallery-search', 'gallery-more', `datetime="${recent[0].publishedAt}"`, 'data-lens="streaming"']) assert.ok(page.includes(marker), marker);
   assert.ok(galleryGroups(recent.slice(0, 3)).includes('datetime="2026-11"'));
   const fallback = galleryCard({ ...recent[0], thumbnail: undefined });
   assert.match(fallback, /no preview figure/);

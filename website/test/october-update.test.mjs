@@ -5,6 +5,20 @@ import { recentPapers } from '../gallery.mjs';
 import { marked } from 'marked';
 
 const catalog = loadCatalog();
+test('November 21 scan separates availability from announcements and covers non-streaming proactivity', () => {
+  const get = id => catalog.papers.find(p => p.id === id);
+  const spotme = get('spotme-perception-participation');
+  assert.equal(spotme.role, 'core');
+  assert.equal(spotme.streaming, false);
+  assert.ok(spotme.facets.evidence.includes('human'));
+  assert.equal(get('pacc-pre-generation-belief-controls').streaming, false);
+  assert.equal(get('alive-interactive-streaming').release.data, 'Announced');
+  assert.equal(get('duopra-full-duplex-agency').release.model, 'Gated');
+  assert.equal(get('mindmem-mental-state-memory').release.code, 'Announced');
+  for (const name of ['ProSpace-Bench','Full-Duplex-Bench v3','FSI-Bench','FuGIBench']) {
+    assert.ok(catalog.benchmarks.some(b => b.name === name), name);
+  }
+});
 test('README streaming representatives are all linked to public resources', () => {
   const block = read('README.md').split('\n## Streaming Proactivity\n')[1].split('\n## ')[0];
   const table = marked.lexer(block).find(t => t.type === 'table');
